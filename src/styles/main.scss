@@ -1,5 +1,66 @@
-$bgcolor: rgb(47, 119, 37);
+@use 'variaveis';
+@use 'hero';
 
-body {
-    background-color: $bgcolor;
+@font-face {
+    font-family: Poppins;
+    src: url(../../assets/fonts/Poppins-Regular.ttf);
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: Poppins;
+    src: url(../../assets/fonts/Poppins-Bold.ttf);
+    font-weight: 700;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+body {
+    background-color: variaveis.$bgColor;
+    font-family: Poppins, sans-serif;
+}
+
+@mixin text ($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$colorMainText;
+}
+
+@mixin title ($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$colorSecText;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.link-text {
+    @include text(18px);
+    color: variaveis.$colorSecText;
+    text-decoration: underline;
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px);
+}
+
