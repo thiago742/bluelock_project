@@ -2,17 +2,10 @@
 
 .hero {
     width: 100%;
-    background-image: url(../images/hero_desktop.jpeg);
+    background-image: url(https://www.uhdpaper.com/2023/02/wednesday-netflix-series-4k-6650h.html?m=1);
     text-align: center;
     background-size: cover;
-
-    @media (max-width: 768px) {
-        background-image: url(../images/hero_celular.jpeg);
-        padding-top: 50vw;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-top: -55px;
-    }
+    padding: 5.6vh;
 
     .button {
         margin-top: 2vw;
@@ -20,11 +13,29 @@
     }
 
     &__content {
+        display: flex;
+        justify-content: space-between;
         margin: 60px;
         max-width: 500px;
+        align-items: center;
 
-        &__branding {
-            max-width: 300px;
+        @media (max-width: 768px) {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__right img {
+            width: 600px;
+            margin-left: 120px;
+
+            @media (max-width: 768px) {
+                margin: 0;
+                width: 300px;
+            }
+        }
+
+        &__branding img{
+            width: 300px;
             margin: 0 auto 40px;
 
             @media (max-width: 768px) {
